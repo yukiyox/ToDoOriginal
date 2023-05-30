@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efe-kK-DiA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dY-6u-vEH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -75,10 +75,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jvT-S5-FtQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="BBx-uB-KVv">
+                    <tabBarItem key="tabBarItem" title="Main" selectedImage="bell.fill" catalog="system" id="BBx-uB-KVv">
                         <imageReference key="image" image="bell.fill" catalog="system"/>
-                        <imageReference key="selectedImage" image="bell.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -90,10 +90,13 @@
         <scene sceneID="XHC-36-9kI">
             <objects>
                 <tabBarController id="2dY-6u-vEH" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bell.fill" catalog="system" id="BEg-7T-HvQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="efe-kK-DiA" kind="relationship" relationship="viewControllers" id="9GV-iR-0Ev"/>
@@ -206,12 +209,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hak-jM-634">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hak-jM-634">
                                 <rect key="frame" x="62" y="280" width="269" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-sk-Ota">
-                                <rect key="frame" x="124" y="202" width="145" height="70"/>
+                                <rect key="frame" x="124" y="184" width="145" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -226,11 +229,11 @@
             </objects>
             <point key="canvasLocation" x="-129" y="-663"/>
         </scene>
-        <!--Item-->
+        <!--All Tasks-->
         <scene sceneID="1a5-Es-weW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDh-LC-kvn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="list.dash" catalog="system" id="dUO-CP-VUW"/>
+                    <tabBarItem key="tabBarItem" title="All Tasks" image="list.dash" catalog="system" selectedImage="list.dash" id="dUO-CP-VUW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W8A-Fq-CJH">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

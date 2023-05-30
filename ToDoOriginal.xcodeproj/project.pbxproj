@@ -30,6 +30,7 @@
 		2BA7831A2A25BCB200554879 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA783192A25BCB200554879 /* Realm */; };
 		2BA7831C2A25BCB200554879 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA7831B2A25BCB200554879 /* RealmSwift */; };
 		2BA7831E2A25BE2A00554879 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7831D2A25BE2A00554879 /* Memo.swift */; };
+		2BA783222A25D94400554879 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA783212A25D94400554879 /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2BA783142A25AFB300554879 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		2BA783152A25AFB300554879 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		2BA7831D2A25BE2A00554879 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		2BA783212A25D94400554879 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				2BA783142A25AFB300554879 /* ListTableViewCell.swift */,
 				2BA783152A25AFB300554879 /* ListTableViewCell.xib */,
 				2BA7831D2A25BE2A00554879 /* Memo.swift */,
+				2BA783212A25D94400554879 /* MainTabController.swift */,
 			);
 			path = ToDoOriginal;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				2BA783092A25ADA100554879 /* TimeViewController.swift in Sources */,
 				2BA7831E2A25BE2A00554879 /* Memo.swift in Sources */,
 				2BA782E22A1A181C00554879 /* AppDelegate.swift in Sources */,
+				2BA783222A25D94400554879 /* MainTabController.swift in Sources */,
 				2BA783132A25AF9E00554879 /* ListTableViewController.swift in Sources */,
 				2BA782E42A1A181C00554879 /* SceneDelegate.swift in Sources */,
 				2BA7830B2A25ADBD00554879 /* AddTaskViewController.swift in Sources */,
