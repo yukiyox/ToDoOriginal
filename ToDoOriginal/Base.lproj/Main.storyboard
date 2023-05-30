@@ -107,7 +107,7 @@
         <!--All Tasks-->
         <scene sceneID="1hf-5y-YmN">
             <objects>
-                <tableViewController id="ikq-gv-N9y" sceneMemberID="viewController">
+                <tableViewController id="ikq-gv-N9y" customClass="ListTableViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jn5-6j-ZUV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6rE-0w-bOp">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rE-0w-bOp" id="9x5-07-q7a">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rE-0w-bOp" id="9x5-07-q7a" customClass="ListTableViewCell" customModule="ToDoOriginal" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -143,7 +143,7 @@
         <!--New Task-->
         <scene sceneID="dmG-kV-pcB">
             <objects>
-                <viewController id="fys-Gp-NZP" customClass="ViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fys-Gp-NZP" customClass="AddTaskViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ReG-yL-Afu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,17 +176,23 @@
                     <navigationItem key="navigationItem" title="New Task" id="S4s-Wh-D5Z">
                         <barButtonItem key="rightBarButtonItem" title="SAVE" id="VcM-5m-KNx">
                             <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="save" destination="fys-Gp-NZP" id="2nS-4t-HGh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="titleTextField" destination="aMc-JP-20e" id="rdw-rC-w1v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYI-bV-gqY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="694" y="13"/>
         </scene>
-        <!--View Controller-->
+        <!--Time View Controller-->
         <scene sceneID="AFf-L7-uN1">
             <objects>
-                <viewController id="20x-aY-uDV" customClass="ViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="20x-aY-uDV" customClass="TimeViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xQh-h7-3HH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
