@@ -8,8 +8,12 @@
 import UIKit
 import RealmSwift
 
-class AddTaskViewController: UIViewController, UITextFieldDelegate {
+class ToDo: Object {
+    dynamic var title = ""
+}
 
+class AddTaskViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var titleTextField: UITextField!
     
     let realm = try! Realm()
@@ -18,7 +22,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         titleTextField.delegate = self
-
+        
         let memo: Memo? = read()
         
         titleTextField.text = memo?.title
@@ -28,46 +32,54 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     func read() -> Memo? {
         return realm.objects(Memo.self).first
     }
-
-    @IBAction func save() {
-        let title: String = titleTextField.text!
-        
-        let memo: Memo? = read()
-        
-        if memo != nil {
-            try! realm.write {
-                memo!.title
-        }
-    } else {
-        let newMemo = Memo()
-        newMemo.title = title
-                
-        try! realm.write {
-            realm.add(newMemo)
-        }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
-        let alert: UIAlertController = UIAlertController(title: "Success", message: "Task Saved", preferredStyle: .alert)
+    @IBAction func addButtonTapped(sender: AnyObject) {
+        let newTodo = ToDo()
         
-        alert.addAction(
-            UIAlertAction(title: "OK", style: .default, handler: nil)
+        // textFieldに入力したデータをnewTodoのtitleに代入
+        newTodo.title = titleTextField.text!
+        
+        // 上記で代入したテキストデータを永続化するための処理
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(newTodo)
+                print("ToDo Saved")
+            })
+        }catch{
+            print("Save is Failed")
+            
+            
+        }
+        let alert = UIAlertController(
+            title: "Success",
+            message: "New task saved",
+            preferredStyle: .alert
         )
-        
-        present(alert, animated: true, completion: nil)
-        
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        ))
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
 }
