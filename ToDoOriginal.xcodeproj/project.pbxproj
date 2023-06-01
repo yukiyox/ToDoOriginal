@@ -31,6 +31,7 @@
 		2BA7831C2A25BCB200554879 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA7831B2A25BCB200554879 /* RealmSwift */; };
 		2BA7831E2A25BE2A00554879 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7831D2A25BE2A00554879 /* Memo.swift */; };
 		2BA783222A25D94400554879 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA783212A25D94400554879 /* MainTabController.swift */; };
+		2BA783262A2858FD00554879 /* AlertIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA783252A2858FD00554879 /* AlertIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		2BA783152A25AFB300554879 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		2BA7831D2A25BE2A00554879 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		2BA783212A25D94400554879 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		2BA783252A2858FD00554879 /* AlertIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		2BA782E02A1A181C00554879 /* ToDoOriginal */ = {
 			isa = PBXGroup;
 			children = (
+				2BA783252A2858FD00554879 /* AlertIcon.png */,
 				2BA782E12A1A181C00554879 /* AppDelegate.swift */,
 				2BA782E32A1A181C00554879 /* SceneDelegate.swift */,
 				2BA782E52A1A181C00554879 /* ViewController.swift */,
@@ -199,6 +202,7 @@
 				2BA783012A21BC0500554879 /* SF-Pro-Rounded-Black.otf in Resources */,
 				2BA783032A21BC0500554879 /* SF-Pro-Rounded-Thin.otf in Resources */,
 				2BA783022A21BC0500554879 /* SF-Pro-Rounded-Light.otf in Resources */,
+				2BA783262A2858FD00554879 /* AlertIcon.png in Resources */,
 				2BA782EB2A1A181E00554879 /* Assets.xcassets in Resources */,
 				2BA782E92A1A181C00554879 /* Main.storyboard in Resources */,
 				2BA783052A21BC0500554879 /* SF-Pro-Rounded-Ultralight.otf in Resources */,

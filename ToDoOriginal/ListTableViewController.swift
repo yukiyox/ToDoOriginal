@@ -27,12 +27,14 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return todoItem.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
         let label = cell.contentView.viewWithTag(1) as! UILabel
+        label.text = todoItem[indexPath.row].title
         
         return cell
     }
