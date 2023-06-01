@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 class ToDo: Object {
-    dynamic var title = ""
+    @objc dynamic var title = ""
 }
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate {
@@ -65,6 +65,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             style: .default,
             handler: nil
         ))
+        self.present(alert, animated: true)
     }
     
     

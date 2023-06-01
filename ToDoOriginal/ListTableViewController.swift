@@ -31,7 +31,9 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
+        let label = cell.contentView.viewWithTag(1) as! UILabel
+        
         return cell
     }
     
