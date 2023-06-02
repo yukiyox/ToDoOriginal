@@ -20,7 +20,7 @@
         <!--Main-->
         <scene sceneID="So6-x9-UuC">
             <objects>
-                <viewController id="efe-kK-DiA" sceneMemberID="viewController">
+                <viewController id="efe-kK-DiA" customClass="ViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F6e-FI-C4Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,10 +81,14 @@
                         <imageReference key="image" image="bell.fill" catalog="system"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DoneButton" destination="twU-5Q-bzo" id="rVW-za-RVG"/>
+                        <outlet property="SkipButton" destination="cG4-wr-aMR" id="u0d-gL-hnn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tl-qY-QZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-866.41221374045801" y="-663.38028169014092"/>
+            <point key="canvasLocation" x="-828" y="-596"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="XHC-36-9kI">
@@ -153,7 +157,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLm-a7-LTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.473282442748086" y="12.67605633802817"/>
+            <point key="canvasLocation" x="-83" y="85"/>
         </scene>
         <!--New Task-->
         <scene sceneID="dmG-kV-pcB">
@@ -202,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYI-bV-gqY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="13"/>
+            <point key="canvasLocation" x="680" y="85"/>
         </scene>
         <!--Time View Controller-->
         <scene sceneID="AFf-L7-uN1">
@@ -239,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5H-za-Edc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="-663"/>
+            <point key="canvasLocation" x="-83" y="-596"/>
         </scene>
         <!--All Tasks-->
         <scene sceneID="1a5-Es-weW">
@@ -258,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixh-4f-Hps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-810" y="13"/>
+            <point key="canvasLocation" x="-828" y="85"/>
         </scene>
     </scenes>
     <resources>

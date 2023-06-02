@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var DoneButton: UIButton!
+    @IBOutlet var SkipButton: UIButton!
+    
     var myData: [String] = ["Eat Breakfast", "Walk my dog", "Clean my shelf"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        DoneButton.layer.cornerRadius = 5
+        SkipButton.layer.cornerRadius = 5
+        
     }
     
     
