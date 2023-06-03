@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var MainLabel: UILabel!
+    
     @IBOutlet var DoneButton: UIButton!
     @IBOutlet var SkipButton: UIButton!
     
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        MainLabel.layer.cornerRadius = 25
         
         DoneButton.layer.cornerRadius = 5
         SkipButton.layer.cornerRadius = 5
