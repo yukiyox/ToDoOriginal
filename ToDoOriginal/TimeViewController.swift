@@ -6,67 +6,45 @@
 //
 
 import UIKit
+import NotificationCenter
+
 class TimeViewController: UIViewController {
-    extension TimeViewController: UNUserNotificationCenterDelegate {
     
-        func userNotificationCenter(
-            _ center: UNUserNotificationCenter,
-            willPresent notification: UNNotification,
-            withCompletionHandler completionHandler: @escaping (_ options: UNNotificationPresentationOptions) -> Void
-        ) {
-           
-            completionHandler([.banner, .list, .sound, .badge])
-        }
-        
-    
-    func showPushPermit(completion: @escaping (Result<Bool, Error>) -> Void) {
-        
-            center.requestAuthorization(options: [.alert, .badge, .sound]) { isGranted, error in
-                if let error = error {
-                    debugPrint(error.localizedDescription)
-                    completion(.failure(error))
-                    return
-                }
-                completion(.success(isGranted))
-            }
-        }
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        var shared = TimeViewController()
-        var center = UNUserNotificationCenter.current()
+    @IBAction func saveNotification(){
+        let datePickerTime = datePicker.date
         
-        func initialize() {
-            center.delegate = TimeViewController.shared
+        let notificationTitle: String = "Title"
+        let calendar = Calendar.current
+        
+        let trigger: UNCalendarNotificationTrigger = UNCalendarNotificationTrigger(dateMatching:calendar.dateComponents([.hour, .minute], from:
+        datePickerTime), repeats: false)
+        
+        let content: UNMutableNotificationContent = UNMutableNotificationContent()
+        content.title = notificationTitle
+        content.sound = UNNotificationSound.default
+        content.badge = 1
+        
+        let request: UNNotificationRequest = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error: Error?) in
+            
+            if error != nil{
+                
+                print("error")
+            } else {
+                
+                print("success")
+            }
+            
+            
         }
-    func scene(
-        _ scene: UIScene,
-        willConnectTo session: UISceneSession,
-        options connectionOptions: UIScene.ConnectionOptions
-    ){
-        guard let _ = (scene as? UIWindowScene) else { return }
-        
-        
-        TimeViewController.shared.initialize()
-    
-        
-        
-        func userNotificationCenter(
-             _ center: UNUserNotificationCenter,
-             didReceive response: UNNotificationResponse,
-             withCompletionHandler completionHandler: @escaping () -> Void
-         ) {
-             completionHandler()
-         }
-        
-        UNCalendarNotificationTrigger(dateMatching: DateComponents, repeats: true)
-     }
-        
     }
-        
-    }
-
     /*
     // MARK: - Navigation
 
