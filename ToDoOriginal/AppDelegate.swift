@@ -22,19 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         Realm.Configuration.defaultConfiguration = config
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted: Bool, error: Error?) in
+            print("許可されたか: \(granted)")
+        }
+        UNUserNotificationCenter.current().delegate = self
         return true
         
     }
         
         // Override point for customization after application launch.
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted: Bool, error: Error?) in
-            print("許可されたか: \(granted)")
         }
-        
-        UNUserNotificationCenter.current().delegate = self
-        return true
-    }
     
     // MARK: UISceneSession Lifecycle
     

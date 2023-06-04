@@ -14,33 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var DoneButton: UIButton!
     @IBOutlet var SkipButton: UIButton!
-    
-    let array: [OriginalTask] = ["Eat Breakfast", "Walk my dog", "Clean shelf", "Dance", "Cook a meal"]
-    if let value = array.randomElement(){
-        print(value)
-    }
-    
-    var myData: [String] = ["Eat Breakfast", "Walk my dog", "Clean my shelf"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        MainLabel.layer.cornerRadius = 25
-        
-        DoneButton.layer.cornerRadius = 5
-        SkipButton.layer.cornerRadius = 5
-        
-        func shuffle() {
-            for _ in array {
-                let swap1 = Int.random(in: 0..<array.count)
-                try! realm.write {
-                    list.swapAt(swap1)
-                }
-            }
-        }
-    }
-    
     
 }
     

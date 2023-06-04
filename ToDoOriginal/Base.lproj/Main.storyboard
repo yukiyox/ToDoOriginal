@@ -222,7 +222,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="7E1-qp-0c6">
-                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="cns-qE-sNA"/>
+                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="cns-qE-sNA">
+                                            <connections>
+                                                <action selector="saveNotification" destination="20x-aY-uDV" id="jxU-fs-Z9G"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
