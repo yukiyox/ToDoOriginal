@@ -44,6 +44,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="DONE">
                                     <fontDescription key="titleFontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButtonClicked" destination="efe-kK-DiA" eventType="touchUpInside" id="mJM-q9-kD7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-wr-aMR">
                                 <rect key="frame" x="66" y="631" width="119" height="47"/>
@@ -65,7 +68,7 @@
                                     <segue destination="20x-aY-uDV" kind="presentation" id="ab6-45-Iai"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-BS-Vpu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-BS-Vpu">
                                 <rect key="frame" x="36" y="268" width="321" height="317"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,8 +86,9 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="DoneButton" destination="twU-5Q-bzo" id="rVW-za-RVG"/>
-                        <outlet property="SkipButton" destination="cG4-wr-aMR" id="u0d-gL-hnn"/>
+                        <outlet property="doneButton" destination="twU-5Q-bzo" id="5u3-T8-J3M"/>
+                        <outlet property="skipButton" destination="cG4-wr-aMR" id="Rk7-ar-d1y"/>
+                        <outlet property="todayLabel" destination="EXz-BS-Vpu" id="qs7-GP-jmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tl-qY-QZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,10 +140,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -245,6 +247,9 @@
                         <viewLayoutGuide key="safeArea" id="12x-7C-gWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="hak-jM-634" id="y3E-N2-KFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5H-za-Edc" sceneMemberID="firstResponder"/>
             </objects>
