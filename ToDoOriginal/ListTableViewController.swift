@@ -4,9 +4,13 @@ import RealmSwift
 class ListTableViewController: UITableViewController {
     
     var todoItem: Results<ToDo>!
+    @IBOutlet var taskView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         
         do {
             let realm = try Realm()
@@ -15,6 +19,10 @@ class ListTableViewController: UITableViewController {
         } catch {
             // Handle error
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +43,8 @@ class ListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
         let label = cell.contentView.viewWithTag(1) as! UILabel
         label.text = todoItem[indexPath.row].title
+
+        cell.taskView.layer.cornerRadius =
         
         return cell
     }

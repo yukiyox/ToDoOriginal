@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var number: Int!
     var todayTask: String!
     
+   var taskarray: [ToDo] = []
     
     var myData: [String] = ["Eat Breakfast", "Walk my dog", "Clean my shelf"]
     
@@ -32,8 +33,8 @@ class ViewController: UIViewController {
             let realm = try! Realm()
             todoItem = realm.objects(ToDo.self)
         
-        let taskarray = Array(todoItem)
-
+    taskarray = Array(todoItem)
+        
         todayLabel.layer.cornerRadius = 25
         
         doneButton.layer.cornerRadius = 5
@@ -45,6 +46,18 @@ class ViewController: UIViewController {
         
         todayLabel.text = todayTask
     }
+    @IBAction func doneButtonClicked() {
+        
+        todayLabel.text = "Have a wonderful day!"
+    }
+
+    @IBAction func skipButtonClicked() {
+        
+        number = Int.random(in: 0 ..< taskarray.count)
+        todayTask = taskarray[number].title
+        todayLabel.text = todayTask
+    }
+    
 }
     
 extension ViewController: UITableViewDelegate {
@@ -53,11 +66,7 @@ extension ViewController: UITableViewDelegate {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     
-    @IBAction func doneButtonClicked() {
-        
-        todayLabel.text = "Have a wonderful day!"
-        
-    }
+
     
     }
     
