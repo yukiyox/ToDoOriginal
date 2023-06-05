@@ -9,6 +9,8 @@ class ListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         
@@ -44,7 +46,7 @@ class ListTableViewController: UITableViewController {
         let label = cell.contentView.viewWithTag(1) as! UILabel
         label.text = todoItem[indexPath.row].title
 
-        cell.taskView.layer.cornerRadius =
+        cell.taskView.layer.cornerRadius = 2
         
         return cell
     }
