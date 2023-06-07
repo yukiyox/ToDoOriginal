@@ -30,21 +30,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-            let realm = try! Realm()
-            todoItem = realm.objects(ToDo.self)
+        let realm = try! Realm()
+        todoItem = realm.objects(ToDo.self)
         
-    taskarray = Array(todoItem)
+        taskarray = Array(todoItem)
         
         todayLabel.layer.cornerRadius = 25
         
         doneButton.layer.cornerRadius = 5
         skipButton.layer.cornerRadius = 5
         
-        number = Int.random(in: 0 ..< taskarray.count)
-        
-        todayTask = taskarray[number].title
-        
-        todayLabel.text = todayTask
+        if taskarray.isEmpty {
+            todayTask = ""
+            
+        } else {
+            
+            number = Int.random(in: 0 ..< taskarray.count)
+            
+            todayTask = taskarray[number].title
+            
+            todayLabel.text = todayTask
+        }
     }
     @IBAction func doneButtonClicked() {
         
