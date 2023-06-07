@@ -46,7 +46,6 @@ class ListTableViewController: UITableViewController {
         let label = cell.contentView.viewWithTag(1) as! UILabel
         label.text = todoItem[indexPath.row].title
 
-        cell.taskView.layer.cornerRadius = 2
         
         return cell
     }

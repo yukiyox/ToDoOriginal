@@ -58,10 +58,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func skipButtonClicked() {
-        
-        number = Int.random(in: 0 ..< taskarray.count)
-        todayTask = taskarray[number].title
-        todayLabel.text = todayTask
+        let realm = try! Realm()
+                todoItem = realm.objects(ToDo.self)
+                let taskarray = Array(todoItem)
+                
+                if taskarray.isEmpty {
+                    todayTask = ""
+                } else {
+                    number = Int.random(in: 0 ..< taskarray.count)
+                    todayTask = taskarray[number].title
+                }
+                
+                todayLabel.text = todayTask
     }
     
 }

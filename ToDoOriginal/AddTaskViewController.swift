@@ -15,6 +15,7 @@ class ToDo: Object {
 class AddTaskViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var backButtonClicked: UIButton!
     
     let realm = try! Realm()
     
@@ -36,6 +37,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @IBAction func addButtonTapped(sender: AnyObject) {
         let newTodo = ToDo()
