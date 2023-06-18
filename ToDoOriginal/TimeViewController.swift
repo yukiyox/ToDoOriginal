@@ -19,7 +19,7 @@ class TimeViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(_ sender: UIButton) {
-           navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
        }
 
     @IBAction func saveNotification(){
@@ -59,7 +59,7 @@ class TimeViewController: UIViewController {
     func showAlertAndReturnHome() {
         let alertController = UIAlertController(title: "Notification Saved", message: "Your notification has been scheduled.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
         alertController.addAction(okAction)
     present(alertController, animated: true, completion: nil)

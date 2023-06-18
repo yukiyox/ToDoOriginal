@@ -29,7 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
         
     }
+    private func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHanndler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(
+            [
+                UNNotificationPresentationOptions.banner,
+                UNNotificationPresentationOptions.list,
+                UNNotificationPresentationOptions.sound,
+                UNNotificationPresentationOptions.badge
+            ]
+        )
         
+        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceiver response: UNNotificationResponse, withcCompletionHandler completionHandler: @escaping () -> Void) {
+            completionHandler()
+        }
+        
+    }
         // Override point for customization after application launch.
         
         }
@@ -47,20 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHanndler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler(
-            [
-                UNNotificationPresentationOptions.banner,
-                UNNotificationPresentationOptions.list,
-                UNNotificationPresentationOptions.sound,
-                UNNotificationPresentationOptions.badge
-            ]
-        )
-        
-        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceiver response: UNNotificationResponse, withcCompletionHandler completionHandler: @escaping () -> Void) {
-            completionHandler()
-        }
-        
-    }
+  
     
 

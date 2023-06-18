@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main-->
+        <!--View Controller-->
         <scene sceneID="So6-x9-UuC">
             <objects>
                 <viewController id="efe-kK-DiA" customClass="ViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,66 +28,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AlertMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-O8-BEq">
-                                <rect key="frame" x="101" y="174" width="190" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Black" family="SF Pro Rounded" pointSize="48"/>
-                                <color key="textColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twU-5Q-bzo">
-                                <rect key="frame" x="205" y="631" width="119" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twU-5Q-bzo">
+                                <rect key="frame" x="211" y="641" width="122" height="50"/>
                                 <color key="backgroundColor" red="0.75686274509803919" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="ITS-TQ-mAI"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="DONE">
-                                    <fontDescription key="titleFontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
+                                    <fontDescription key="titleFontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="doneButtonClicked" destination="efe-kK-DiA" eventType="touchUpInside" id="Haa-pQ-euq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-wr-aMR">
-                                <rect key="frame" x="66" y="631" width="119" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-BS-Vpu">
+                                <rect key="frame" x="36" y="266" width="321" height="320"/>
+                                <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="mlX-12-Gg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJH-O8-BEq">
+                                <rect key="frame" x="36" y="172" width="321" height="58"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Black" family="SF Pro Rounded" pointSize="48"/>
+                                <color key="textColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-wr-aMR">
+                                <rect key="frame" x="60" y="641" width="122" height="50"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.82745098039215681" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="sl2-Jh-Ysi"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SKIP">
-                                    <fontDescription key="titleFontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
+                                    <fontDescription key="titleFontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="skipButtonClicked" destination="efe-kK-DiA" eventType="touchUpInside" id="f4F-4E-yKC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-Yf-Du9">
-                                <rect key="frame" x="337" y="59.333333333333258" width="40" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.75686274509803919" green="0.76470588235294112" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="a" backgroundImage="gearshape.fill" catalog="system"/>
-                                <connections>
-                                    <segue destination="20x-aY-uDV" kind="show" id="Cpy-2Y-ASk"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-BS-Vpu">
-                                <rect key="frame" x="36" y="268" width="321" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jvT-S5-FtQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jvT-S5-FtQ" firstAttribute="trailing" secondItem="twU-5Q-bzo" secondAttribute="trailing" constant="60" id="19g-Rb-V9u"/>
+                            <constraint firstItem="twU-5Q-bzo" firstAttribute="top" secondItem="EXz-BS-Vpu" secondAttribute="bottom" constant="55" id="BWh-LR-aVf"/>
+                            <constraint firstItem="EXz-BS-Vpu" firstAttribute="leading" secondItem="jvT-S5-FtQ" secondAttribute="leading" constant="36" id="E7i-xO-61I"/>
+                            <constraint firstItem="jvT-S5-FtQ" firstAttribute="trailing" secondItem="EXz-BS-Vpu" secondAttribute="trailing" constant="36" id="GOf-tL-7tZ"/>
+                            <constraint firstItem="EXz-BS-Vpu" firstAttribute="centerX" secondItem="F6e-FI-C4Z" secondAttribute="centerX" id="MiM-6p-RqZ"/>
+                            <constraint firstItem="oJH-O8-BEq" firstAttribute="top" secondItem="jvT-S5-FtQ" secondAttribute="top" constant="69" id="UxT-2x-JG5"/>
+                            <constraint firstItem="jvT-S5-FtQ" firstAttribute="trailing" secondItem="oJH-O8-BEq" secondAttribute="trailing" constant="36" id="VXW-iq-kbT"/>
+                            <constraint firstItem="cG4-wr-aMR" firstAttribute="leading" secondItem="jvT-S5-FtQ" secondAttribute="leading" constant="60" id="gjB-zs-XaK"/>
+                            <constraint firstItem="oJH-O8-BEq" firstAttribute="leading" secondItem="jvT-S5-FtQ" secondAttribute="leading" constant="36" id="nkS-5W-bux"/>
+                            <constraint firstItem="EXz-BS-Vpu" firstAttribute="centerY" secondItem="F6e-FI-C4Z" secondAttribute="centerY" id="tcS-hn-ER8"/>
+                            <constraint firstItem="cG4-wr-aMR" firstAttribute="top" secondItem="EXz-BS-Vpu" secondAttribute="bottom" constant="55" id="wpM-Xh-yzK"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" selectedImage="bell.fill" catalog="system" id="BBx-uB-KVv">
-                        <imageReference key="image" image="bell.fill" catalog="system"/>
-                    </tabBarItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7jB-DJ-pes">
+                        <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="dX2-KP-t0l">
+                            <color key="tintColor" red="0.75686274509999996" green="0.76470588240000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="20x-aY-uDV" kind="presentation" modalPresentationStyle="fullScreen" id="1rA-mE-6Xx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="doneButton" destination="twU-5Q-bzo" id="5u3-T8-J3M"/>
                         <outlet property="skipButton" destination="cG4-wr-aMR" id="Rk7-ar-d1y"/>
@@ -96,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tl-qY-QZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828.24427480916029" y="-596.47887323943667"/>
+            <point key="canvasLocation" x="-83.206106870229007" y="-596.47887323943667"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="XHC-36-9kI">
@@ -111,7 +125,7 @@
                         <color key="selectedImageTintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="efe-kK-DiA" kind="relationship" relationship="viewControllers" id="9GV-iR-0Ev"/>
+                        <segue destination="JKW-Z7-Fll" kind="relationship" relationship="viewControllers" id="9GV-iR-0Ev"/>
                         <segue destination="dDh-LC-kvn" kind="relationship" relationship="viewControllers" id="0xo-c3-NM4"/>
                     </connections>
                 </tabBarController>
@@ -128,25 +142,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="6rE-0w-bOp">
-                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="49" id="6rE-0w-bOp">
+                                <rect key="frame" x="0.0" y="50" width="393" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rE-0w-bOp" id="9x5-07-q7a" customClass="ListTableViewCell" customModule="ToDoOriginal" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAF-rR-Mlo">
-                                            <rect key="frame" x="34" y="11" width="326" height="78"/>
+                                            <rect key="frame" x="34" y="0.0" width="326" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55h-SE-hpK">
-                                            <rect key="frame" x="20" y="0.0" width="353" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
                                     </subviews>
                                     <color key="tintColor" systemColor="labelColor"/>
                                 </tableViewCellContentView>
@@ -178,23 +187,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aMc-JP-20e">
-                                <rect key="frame" x="27" y="338" width="338" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aMc-JP-20e">
+                                <rect key="frame" x="27" y="338" width="338" height="38.333333333333314"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a new task!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-bm-wKT">
-                                <rect key="frame" x="103" y="213" width="186" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new task!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-bm-wKT">
+                                <rect key="frame" x="9" y="213" width="375" height="34"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make it short and simple!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-p6-TY8">
-                                <rect key="frame" x="51" y="255" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make it short and simple!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-p6-TY8">
+                                <rect key="frame" x="9" y="255" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -202,10 +208,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2SO-dK-q0t"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bkK-p6-TY8" firstAttribute="top" secondItem="OR5-bm-wKT" secondAttribute="bottom" constant="8" symbolic="YES" id="Gxu-Nf-UG0"/>
+                            <constraint firstItem="aMc-JP-20e" firstAttribute="top" secondItem="bkK-p6-TY8" secondAttribute="bottom" constant="49" id="J1E-TM-Faw"/>
+                            <constraint firstItem="bkK-p6-TY8" firstAttribute="leading" secondItem="2SO-dK-q0t" secondAttribute="leading" constant="9" id="JEQ-no-kNc"/>
+                            <constraint firstItem="2SO-dK-q0t" firstAttribute="trailing" secondItem="bkK-p6-TY8" secondAttribute="trailing" constant="10" id="JSB-NC-xlj"/>
+                            <constraint firstItem="2SO-dK-q0t" firstAttribute="trailing" secondItem="aMc-JP-20e" secondAttribute="trailing" constant="28" id="N3p-aG-9fJ"/>
+                            <constraint firstItem="aMc-JP-20e" firstAttribute="leading" secondItem="2SO-dK-q0t" secondAttribute="leading" constant="27" id="UJg-XV-h2F"/>
+                            <constraint firstItem="2SO-dK-q0t" firstAttribute="trailing" secondItem="OR5-bm-wKT" secondAttribute="trailing" constant="9" id="jY1-Sh-6FF"/>
+                            <constraint firstItem="OR5-bm-wKT" firstAttribute="top" secondItem="2SO-dK-q0t" secondAttribute="top" constant="110" id="jgy-kp-e9t"/>
+                            <constraint firstItem="OR5-bm-wKT" firstAttribute="leading" secondItem="2SO-dK-q0t" secondAttribute="leading" constant="9" id="r5o-0a-lq3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" id="S4s-Wh-D5Z">
                         <barButtonItem key="rightBarButtonItem" title="SAVE" id="VcM-5m-KNx">
-                            <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <connections>
                                 <action selector="addButtonTappedWithSender:" destination="fys-Gp-NZP" id="aP6-6w-2bg"/>
                             </connections>
@@ -217,27 +234,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYI-bV-gqY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="85"/>
+            <point key="canvasLocation" x="674.04580152671758" y="84.507042253521135"/>
         </scene>
         <!--Time View Controller-->
         <scene sceneID="AFf-L7-uN1">
             <objects>
                 <viewController id="20x-aY-uDV" customClass="TimeViewController" customModule="ToDoOriginal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xQh-h7-3HH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-jO-DER">
-                                <rect key="frame" x="0.0" y="29" width="393" height="44"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hak-jM-634">
+                                <rect key="frame" x="62" y="318" width="269" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set when to receive your daily notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-sk-Ota">
+                                <rect key="frame" x="38" y="251.66666666666666" width="317" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-rS-qWd">
+                                <rect key="frame" x="0.0" y="33" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="TIme Setting" id="7E1-qp-0c6">
+                                    <navigationItem title="Time Setting" id="2nI-0f-MU4">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="Eon-kD-uAf">
+                                            <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="backButtonClicked:" destination="20x-aY-uDV" id="otz-uF-s8K"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="SAVE" id="cns-qE-sNA">
+                                            <color key="tintColor" red="1" green="0.69803921570000005" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="saveNotification" destination="20x-aY-uDV" id="jxU-fs-Z9G"/>
                                             </connections>
@@ -245,29 +273,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hak-jM-634">
-                                <rect key="frame" x="62" y="280" width="269" height="212"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set when to receive your daily notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DZ-sk-Ota">
-                                <rect key="frame" x="38" y="202" width="317" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="12x-7C-gWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7DZ-sk-Ota" firstAttribute="leading" secondItem="12x-7C-gWl" secondAttribute="leading" constant="38" id="1eB-kd-JKX"/>
+                            <constraint firstItem="12x-7C-gWl" firstAttribute="trailing" secondItem="7DZ-sk-Ota" secondAttribute="trailing" constant="38" id="H5b-Gt-RnO"/>
+                            <constraint firstItem="hak-jM-634" firstAttribute="leading" secondItem="12x-7C-gWl" secondAttribute="leading" constant="62" id="XKt-vD-tH2"/>
+                            <constraint firstItem="hak-jM-634" firstAttribute="centerY" secondItem="xQh-h7-3HH" secondAttribute="centerY" id="eOD-mJ-zjf"/>
+                            <constraint firstItem="hak-jM-634" firstAttribute="top" secondItem="7DZ-sk-Ota" secondAttribute="bottom" constant="46" id="ssf-wo-RHj"/>
+                            <constraint firstItem="hak-jM-634" firstAttribute="centerX" secondItem="xQh-h7-3HH" secondAttribute="centerX" id="tlX-jr-a6I"/>
+                            <constraint firstItem="12x-7C-gWl" firstAttribute="trailing" secondItem="hak-jM-634" secondAttribute="trailing" constant="62" id="zWN-4L-tV0"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="V9f-70-xS1"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="hak-jM-634" id="y3E-N2-KFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5H-za-Edc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-83" y="-596"/>
+            <point key="canvasLocation" x="679" y="-596"/>
         </scene>
         <!--All Tasks-->
         <scene sceneID="1a5-Es-weW">
@@ -288,6 +315,27 @@
             </objects>
             <point key="canvasLocation" x="-828" y="85"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="w29-Py-0C5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKW-Z7-Fll" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" selectedImage="bell.fill" catalog="system" id="BBx-uB-KVv">
+                        <imageReference key="image" image="bell.fill" catalog="system"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bMc-qA-chG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="efe-kK-DiA" kind="relationship" relationship="rootViewController" id="dXd-BW-csO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hae-cf-5vO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828.24427480916029" y="-596.47887323943667"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
@@ -302,6 +350,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
